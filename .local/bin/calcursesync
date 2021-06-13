@@ -1,0 +1,10 @@
+#!/bin/sh
+
+ps cax | grep calcursesync > /dev/null
+pidof calcursesync > /dev/null
+if [ $? -eq 0 ]; then
+    echo "Process is running."
+else
+    echo "Process is not running."
+    CALCURSE_CALDAV_PASSWORD=$(pass show thomas@thomasst.xyz/nc.thomasst.xyz/password) calcurse-caldav
+fi

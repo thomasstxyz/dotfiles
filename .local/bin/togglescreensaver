@@ -1,0 +1,21 @@
+#!/bin/sh
+
+cd ~/.local/share
+STATUSFILE="screensaver_state"
+
+case `cat $STATUSFILE` in
+    🟥)
+        xset s 0 0 && xset dpms 0 0 0 && echo "🟦" > $STATUSFILE
+        notify-send "disabled screensaver"
+        ;;
+    🟦)
+        xset s 300 300 && xset dpms 300 300 300 && echo "🟥" > $STATUSFILE
+        notify-send "enabled screensaver (5 minutes)"
+        ;;
+    ""|*)
+        xset s 0 0 && xset dpms 0 0 0 && echo "🟦" > $STATUSFILE
+        notify-send "disabled screensaver"
+        ;;
+esac
+
+# For status information:  xset q

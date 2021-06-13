@@ -1,0 +1,1 @@
+/home/thomas/.config/shell/profile

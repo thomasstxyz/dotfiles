@@ -1,0 +1,46 @@
+#                     ██   ██
+#                    ░██  ░██
+#  ██████  ██████   ██████░██      ██   ██ ██████  ██████
+# ░░░░██  ░░░░░░██ ░░░██░ ░██████ ░██  ░██░░██░░█ ░░░░░░██
+#    ██    ███████   ░██  ░██░░░██░██  ░██ ░██ ░   ███████
+#   ██    ██░░░░██   ░██  ░██  ░██░██  ░██ ░██    ██░░░░██
+#  ██████░░████████  ░░██ ░██  ░██░░██████░███   ░░████████
+# ░░░░░░  ░░░░░░░░    ░░  ░░   ░░  ░░░░░░ ░░░     ░░░░░░░░
+
+# Enable copy to clipboard
+set selection-clipboard clipboard
+
+set statusbar-h-padding 0
+set statusbar-v-padding 0
+set page-padding 1
+map u navigate previous
+map d navigate next
+map D toggle_page_mode
+map r reload
+map R rotate
+map K zoom in
+map J zoom out
+map i recolor
+map p print
+set show-v-scrollbar true
+#set window-height 700
+#set window-width 740
+map b toggle_statusbar
+map B toggle_inputbar
+
+# easy-on-the-eye colors (grey, dark)
+set recolor true
+set default-bg "#2E3440"
+set default-fg "#D8DEE9"
+set recolor-lightcolor  "#2E3440"
+set recolor-darkcolor "#D8DEE9"
+set statusbar-fg "#000000"
+set statusbar-bg "#3B4252"
+set inputbar-fg "#D8DEE9"
+set inputbar-bg "#3B4252"
+set completion-highlight-fg "#000000"
+set completion-highlight-bg "#5E81AC"
+set highlight-color "#5E81AC"
+set highlight-active-color "#88C0D0"
+set notification-fg "#000000"
+set notification-bg "#5E81AC"

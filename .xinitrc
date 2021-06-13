@@ -1,0 +1,1 @@
+/home/thomas/.config/x11/xinitrc

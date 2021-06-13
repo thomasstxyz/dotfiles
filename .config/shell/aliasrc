@@ -1,0 +1,40 @@
+#!/bin/sh
+
+# Use neovim for vim if present.
+[ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
+
+# Verbosity and settings that you pretty much just always are going to want.
+alias \
+	cp="cp -iv" \
+	mv="mv -iv" \
+	rm="rm -vIi" \
+	grep="grep --color=auto" \
+        grepa="grep -B 3 -A 3" \
+	diff="diff --color=auto" \
+	ccat="highlight --out-format=ansi --force" \
+	yt="youtube-dl --add-metadata -i" \
+	yta="yt -x -f bestaudio/best" \
+	ffmpeg="ffmpeg -hide_banner" \
+	ls="ls -hN --color=auto --group-directories-first" \
+        ll='ls -hNl --color=auto --group-directories-first' \
+        la='ls -hNla --color=auto --group-directories-first' \
+        lh='ls -hNlah --color=auto --group-directories-first' \
+        ap='ansible-playbook' \
+	tsm="transmission-remote" \
+	YT="youtube-viewer" \
+	sdn="shutdown -h now" \
+	f="$FILE" \
+	e="$EDITOR" \
+	v="nvim" \
+        sv="sudo nvim" \
+	sp="sudo pacman" \
+        SS="sudo systemctl" \
+        sudo="sudo -v; sudo " \
+	z="zathura" \
+        bc="bc -ql" \
+	ref="shortcuts >/dev/null; source ${XDG_CONFIG_HOME:-$HOME/.config}/shortcutrc ; source ${XDG_CONFIG_HOME:-$HOME/.config}/zshnameddirrc" \
+	weath="less -S ${XDG_DATA_HOME:-$HOME/.local/share}/weatherreport" \
+	tmux="tmux -f ${XDG_CONFIG_HOME:-$HOME/.config}/tmux/tmux.conf" \
+        treed="tree -d -L 3" \
+        dcc="dictcc" \
+        tlmgr="$TEXMFDIST/scripts/texlive/tlmgr.pl --usermode"

@@ -1,0 +1,11 @@
+#!/bin/sh
+
+case $BLOCK_BUTTON in
+	1) maim -s | xclip -selection clipboard -t image/png ;;
+	2) ;;
+	3) maimpick ;;
+	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
+esac
+
+printf "📸"
+#printf "$(cat ~/.local/share/screensaver_state)"
