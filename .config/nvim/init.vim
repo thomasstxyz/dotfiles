@@ -66,9 +66,9 @@ map <leader>o :setlocal spell! spelllang=en_us<CR>
 map <leader>O :setlocal spell! spelllang=de_at<CR>
 
 " compile latex document
-map <leader>c :w! \| !pdflatex Masterarbeit.tex && biber Masterarbeit && pdflatex Masterarbeit.tex<CR>
+"map <leader>c :w! \| !pdflatex Masterarbeit.tex && biber Masterarbeit && pdflatex Masterarbeit.tex<CR>
+map <leader>c :w! \| !pdflatex Presentation.tex<CR>
 "map <leader>c :w! \| !pdflatex Report.tex&& bibtex Report && pdflatex Report.tex<CR>
-"map <leader>c :w! \| !pdflatex Presentation.tex<CR>
 "map <leader>c :w! \| !pdflatex doc.tex&& biber doc && pdflatex doc.tex<CR>
 "map <leader>c :w! \| !pdflatex doc.tex<CR>
 "map <leader>c :w! \| !pdflatex Arbeit2Monitoring.tex<CR>

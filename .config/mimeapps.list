@@ -3,7 +3,7 @@ text/x-shellscript=text.desktop;
 x-scheme-handler/magnet=torrent.desktop;
 application/x-bittorrent=torrent.desktop;
 x-scheme-handler/mailto=userapp-Thunderbird-NCK3R0.desktop
-text/plain=text.desktop;
+text/plain=mousepad.desktop
 application/postscript=pdf.desktop;
 application/pdf=pdf.desktop;
 image/png=img.desktop;
@@ -19,9 +19,11 @@ x-scheme-handler/msteams=teams.desktop
 text/x-troff-mm=freemind.desktop
 x-scheme-handler/https=firefox.desktop
 x-scheme-handler/http=firefox.desktop
+x-scheme-handler/etcher=balena-etcher-electron.desktop
+x-scheme-handler/mailspring=Mailspring.desktop
 
 [Added Associations]
-text/plain=vim.desktop;mousepad.desktop;
+text/plain=mousepad.desktop;vim.desktop;
 video/webm=mpv.desktop;org.xfce.Parole.desktop;
 video/mp4=mpv.desktop;org.xfce.Parole.desktop;
 inode/directory=pycharm.desktop;
@@ -32,3 +34,5 @@ text/x-tex=nvim.desktop;gvim.desktop;vim.desktop;texstudio.desktop;
 audio/mpeg=mpv.desktop;spek.desktop;
 application/pdf=atril.desktop;com.github.xournalpp.xournalpp.desktop;org.pwmt.zathura-pdf-mupdf.desktop;
 text/x-troff-mm=freemind.desktop;
+application/octet-stream=gvim.desktop;
+application/vnd.ms-publisher=mousepad.desktop;gvim.desktop;org.gnome.Evince.desktop;atril.desktop;

@@ -1,22 +1,16 @@
 # sxhkdrc
 
-# personal programs
-super + shift + n
-	$TERMINAL -e $EDITOR ~/data/IT/linux/howto-linux
-super + shift + t
-	$TERMINAL -e $EDITOR ~/data/IT/linux/todo-linux
-
 # basic programs
 super + e
 	thunar
-super + shift + h
-	$TERMINAL -e htop
+#super + shift + h
+#	$TERMINAL -e htop
 super + m
 	$TERMINAL -e neomutt
 super + n
 	$TERMINAL -e newsboat
-super + c
-	$TERMINAL -e calcurse
+#super + c
+#	$TERMINAL -e calcurse
 super + shift + c
 	$TERMINAL -e python
 super + shift + a
@@ -34,6 +28,12 @@ super + shift + Return
 super + shift + p
         passmenu
 
+alt + space
+        rofi -show run
+
+#super + Tab
+#        rofi -show window
+
 # up/down left/right arrows -> map to vim keys
 ctrl + alt + j
         xdotool keyup j key --clearmodifiers Down
@@ -45,12 +45,14 @@ ctrl + alt + l
         xdotool keyup l key --clearmodifiers Right
 
 # lock screen
-super + alt + x
+super + alt + l
+#super + alt + x
         sleep 1 && xset dpms force off
         #slock
 
 # toggle screensaver on/off
-super + alt + ctrl + x
+super + alt + shift + l
+#super + alt + ctrl + x
         togglescreensaver && pkill -RTMIN+24 dwmblocks
 
 # toggle different keyboard layout

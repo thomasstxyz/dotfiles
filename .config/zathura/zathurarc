@@ -14,7 +14,10 @@ set statusbar-h-padding 0
 set statusbar-v-padding 0
 set page-padding 1
 map u navigate previous
+map <Left> navigate previous
 map d navigate next
+map <Right> navigate next
+map <Space> navigate next
 map D toggle_page_mode
 map r reload
 map R rotate

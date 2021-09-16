@@ -1,0 +1,15 @@
+
+dpconfig auto          # connects ext monitor if available (have to set your specific display names in the script)
+#DISPLAY=":0" picom -b &  # composite manager for opacity and shadows
+# xcompmgr &		# xcompmgr for transparency / compositor
+
+#setbg ~/.local/share/wallpapers/arch-linux-black-bg.png &
+setbg ~/.local/share/wallpapers/arch-logo-dark.png &
+
+
+echo "🟥" > ~/.local/share/screensaver_state &     # workaround with my screensaver script and statusbar
+
+dwmblocks &             # start status bar
+
+xss-lock -- slock &     # enable lock screen after waking from systemctl suspend and hibernate
+xset s 300 300 ; xset dpms 300 300 300 &  # set screensaver after 5 minutes

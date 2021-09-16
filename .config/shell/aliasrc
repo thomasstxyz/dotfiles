@@ -37,4 +37,5 @@ alias \
 	tmux="tmux -f ${XDG_CONFIG_HOME:-$HOME/.config}/tmux/tmux.conf" \
         treed="tree -d -L 3" \
         dcc="dictcc" \
+        giot="gio trash" \
         tlmgr="$TEXMFDIST/scripts/texlive/tlmgr.pl --usermode"
