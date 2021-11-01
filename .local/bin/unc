@@ -1,0 +1,8 @@
+#!/bin/sh
+#
+# strip # comments
+#
+# (c) by Thomas Stadler <thomas@thomasst.xyz>
+# licensed under the GPL (v2 or higher)
+
+awk -F '#' '($0 !~ /^[[:space:]]*#.*$/ && NF) {print $1}' $1
