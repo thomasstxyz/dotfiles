@@ -8,16 +8,20 @@
 #	! pidof pulseaudio >/dev/null &&
 #	setsid -f pulseaudio --start >/dev/null 2>&1
 
+eval $(gnome-keyring-daemon --start); export SSH_AUTH_SOCK     # start gnome-keyring
+#eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh); export SSH_AUTH_SOCK     # start gnome-keyring
 
-dunst & 		# dunst for notifications
+#dunst & 		# dunst for notifications
 remaps &		# run the remaps script, switching caps/esc and more; check it for more info
-transmission-daemon &   # torrent client
+#transmission-daemon &   # torrent client
+
 #dbus-update-activation-environment --systemd DISPLAY
+
 mailsync &              # sync mail
 
-~/.config/calcurse/hooks/pre-load &  # sync calcurse calendar
+#~/.config/calcurse/hooks/pre-load &  # sync calcurse calendar
 
-libinput-gestures-setup start &  # touchpad gestures daemon
+#libinput-gestures-setup start &  # touchpad gestures daemon
 
 # xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/Xresources &	# Uncomment to use Xresources colors/settings on startup
 
@@ -26,16 +30,11 @@ remaps-udev-loop.py &   # run remaps again when usb keyboards are plugged in (wo
 unclutter --timeout 3 &	# hide mouse when idle
 redshift &              # adjust color temperature (night light)
 
-eval $(gnome-keyring-daemon --start); export SSH_AUTH_SOCK     # start gnome-keyring
-#eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh); export SSH_AUTH_SOCK     # start gnome-keyring
-
 # x0vncserver -rfbauth ~/.vnc/passwd -depth 24 +extension Composite &  # direct control over a physical X session
 
 # mpd &			# music player daemon, you might prefer it as a service though
 
 sxhkd &                 # keyboard shortcuts (simple X hotkey daemon)
-
-#XDG_SESSION_TYPE=x11 plank &                 # dock bar
 
 
 

@@ -19,6 +19,7 @@ alias \
         ll='ls -hNl --color=auto --group-directories-first' \
         la='ls -hNla --color=auto --group-directories-first' \
         lh='ls -hNlah --color=auto --group-directories-first' \
+        l='exa -l --group --group-directories-first' \
         ap='ansible-playbook' \
 	tsm="transmission-remote" \
 	YT="youtube-viewer" \

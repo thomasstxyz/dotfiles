@@ -1,20 +1,24 @@
 # sxhkdrc
 
 # basic programs
+super + t
+        $TERMINAL
+super + shift + t
+        thunderbird
 super + e
 	thunar
 #super + shift + h
-#	$TERMINAL -e htop
+	#$TERMINAL -e htop
 super + m
 	$TERMINAL -e neomutt
 super + n
 	$TERMINAL -e newsboat
-#super + c
-#	$TERMINAL -e calcurse
+super + p
+        dmenu_run
+super + shift + p
+        passmenu
 super + shift + c
 	$TERMINAL -e python
-super + shift + a
-	$TERMINAL -e pulsemixer
 super + r
 	$TERMINAL -e ranger
 super + shift + v
@@ -25,11 +29,9 @@ super + shift + Return
 	samedir
 
 #
-super + shift + p
-        passmenu
 
-alt + space
-        rofi -show run
+#alt + space
+#        rofi -show run
 
 #super + Tab
 #        rofi -show window
@@ -56,8 +58,8 @@ super + alt + shift + l
         togglescreensaver && pkill -RTMIN+24 dwmblocks
 
 # toggle different keyboard layout
-super + alt + space
-        togglekblayout && pkill -RTMIN+23 dwmblocks
+#super + alt + space
+#        togglekblayout && pkill -RTMIN+23 dwmblocks
 
 # XF86 buttons
 XF86Launch1

@@ -25,15 +25,10 @@ else
 	. "$HOME/.xprofile"
 fi
 
+exec startxfce4
 
-#export XDG_SESSION_TYPE=x11
-#export GDK_BACKEND=x11
-#export XDG_CURRENT_DESKTOP=Budgie:GNOME
-#exec budgie-desktop
-
-#exec startxfce4
-
-source "${XDG_CONFIG_HOME:-$HOME/.config}/x11/xprofile-dwm"  # dwm, window manager specific programs
-while :; do
-    ssh-agent dwm
-done
+#source "${XDG_CONFIG_HOME:-$HOME/.config}/x11/xprofile-dwm"  # dwm, window manager specific programs
+#while :; do
+#    #ssh-agent dwm
+#    exec dwm
+#done

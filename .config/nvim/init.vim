@@ -67,7 +67,8 @@ map <leader>O :setlocal spell! spelllang=de_at<CR>
 
 " compile latex document
 "map <leader>c :w! \| !pdflatex Masterarbeit.tex && biber Masterarbeit && pdflatex Masterarbeit.tex<CR>
-map <leader>c :w! \| !pdflatex Presentation.tex<CR>
+"map <leader>c :w! \| !pdflatex Presentation.tex<CR>
+map <leader>c :w! \| !groff -ms -k doc.ms -T pdf > doc.pdf<CR>
 "map <leader>c :w! \| !pdflatex Report.tex&& bibtex Report && pdflatex Report.tex<CR>
 "map <leader>c :w! \| !pdflatex doc.tex&& biber doc && pdflatex doc.tex<CR>
 "map <leader>c :w! \| !pdflatex doc.tex<CR>
@@ -260,18 +261,16 @@ map Y y$
 " next search
 nnoremap <C-L> :nohl<CR><C-L>
 
-" thomas
-
 set clipboard=unnamedplus
 
 " disable automatic commenting on newline
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Automatically deletes all trailing whitespace on save.
-autocmd BufWritePre * %s/\s\+$//e
+"autocmd BufWritePre * %s/\s\+$//e
 
 " Automatically deletes all trailing newlines on save.
-autocmd BufWritepre * %s/\n\+\%$//e
+"autocmd BufWritepre * %s/\n\+\%$//e
 
 " line number counter on the left
 set relativenumber
@@ -296,6 +295,9 @@ set nowrap
 vnoremap <C-c> "+y
 map <C-p> "+P
 
-"use docx2txt.pl to allow VIm to view the text content of a .docx file directly.
+" use docx2txt.pl to allow VIm to view the text content of a .docx file directly.
 autocmd BufReadPre *.docx set ro
 autocmd BufReadPost *.docx %!docx2txt.pl
+
+" syntax highlighting for groff .ms files
+au BufNewFile,BufRead *.ms set filetype=groff
